@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>CAPACITOR_DEBUG</key>
+	<string>$(CAPACITOR_DEBUG)</string>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>en</string>
+	<key>CFBundleDisplayName</key>
+        <string>JARVIS</string>
+	<key>CFBundleExecutable</key>
+	<string>$(EXECUTABLE_NAME)</string>
+	<key>CFBundleIdentifier</key>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>$(PRODUCT_NAME)</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>$(MARKETING_VERSION)</string>
+	<key>CFBundleVersion</key>
+	<string>$(CURRENT_PROJECT_VERSION)</string>
+	<key>LSRequiresIPhoneOS</key>
+	<true/>
+	<key>UILaunchStoryboardName</key>
+	<string>LaunchScreen</string>
+	<key>UIMainStoryboardFile</key>
+	<string>Main</string>
+	<key>UIRequiredDeviceCapabilities</key>
+	<array>
+		<string>armv7</string>
+	</array>
+	<key>UISupportedInterfaceOrientations</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationLandscapeLeft</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
+	</array>
+	<key>UISupportedInterfaceOrientations~ipad</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationPortraitUpsideDown</string>
+		<string>UIInterfaceOrientationLandscapeLeft</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
+	</array>
+	<key>UIViewControllerBasedStatusBarAppearance</key>
+	<true/>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>JARVIS necesita el micrófono para escuchar sus órdenes de voz.</string>
+	<key>NSSpeechRecognitionUsageDescription</key>
+	<string>JARVIS necesita reconocimiento de voz para entender sus órdenes.</string>
+	<key>NSCameraUsageDescription</key>
+	<string>JARVIS necesita la cámara para tomar fotos cuando usted lo ordene por voz.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>JARVIS necesita acceso a sus fotos para guardarlas y mostrárselas.</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>JARVIS necesita guardar las fotos que usted le pida tomar.</string>
+	<key>NSContactsUsageDescription</key>
+	<string>JARVIS necesita sus contactos para poder llamarlos cuando usted lo pida por voz.</string>
+	<key>NSCalendarsUsageDescription</key>
+	<string>JARVIS necesita su calendario para crear y consultar citas por voz.</string>
+	<key>NSCalendarsFullAccessUsageDescription</key>
+	<string>JARVIS necesita acceso completo al calendario para agendar citas por voz.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>JARVIS necesita su ubicación para responder dónde está usted y darle el clima local.</string>
+</dict>
+</plist>
