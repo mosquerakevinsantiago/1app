@@ -1,0 +1,45 @@
+name: Compilar APK de JARVIS
+
+on:
+  push:
+    branches: [ main, master ]
+  workflow_dispatch: {}
+
+jobs:
+  build-apk:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Descargar el código
+        uses: actions/checkout@v4
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Configurar Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '21'
+
+      - name: Instalar dependencias
+        run: npm install
+
+      - name: Compilar puente nativo y sincronizar Capacitor
+        run: |
+          npm run build:bridge
+          npx cap sync android
+
+      - name: Dar permisos a Gradle
+        run: chmod +x android/gradlew
+
+      - name: Compilar el APK
+        working-directory: android
+        run: ./gradlew assembleDebug --no-daemon
+
+      - name: Subir el APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: jarvis-apk
+          path: android/app/build/outputs/apk/debug/app-debug.apk
